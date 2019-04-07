@@ -1,4 +1,4 @@
-<div>
+<div class="search">
   <h3>京东商城缓存列表功能</h3>
   <input type="text" [(ngModel)]="searchValue"> <button (click)="doSearch()">搜索</button>
   <br> &nbsp;
@@ -6,10 +6,12 @@
   <br>
   <h4>缓存列表区</h4>
   <ul>
-    <!-- <li *ngFor="let item of catchList;key=item.id">
-      <input type="checkbox" [(ngModel)]="item.checked"> <span>&nbsp;</span>
-      <span>{{item.title}}</span> <span>&nbsp;</span>
-      <span (click)="delValue(item.id)">x</span> <span>&nbsp;</span>
-    </li> -->
+    <li *ngFor="let item of catchList">
+      <input type="checkbox" [(ngModel)]="item.checked"> <span>-----&nbsp;</span>
+      <span>{{item.title}}------</span> <span>&nbsp;</span>
+      <span>{{item.id}}------</span> <span>&nbsp;</span>
+      <span>x</span> <span>&nbsp;</span>
+      <!-- <span (click)="delValue(item.id)">x</span> <span>&nbsp;</span> -->
+    </li>
   </ul>
 </div>

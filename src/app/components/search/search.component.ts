@@ -11,7 +11,8 @@ public catchList:Array<any>=[
   {
     title:'默认值',
     checked:false,
-    isDel:false
+    isDel:false,
+    id:66
   }
 ]
   constructor() { }
@@ -21,7 +22,7 @@ public catchList:Array<any>=[
   doSearch(){
     console.log(this.searchValue)
     let obj:object={
-      title:this.searchValue,
+      title:this.searchValue || '朱文龙more',
       checked:false,
       isDel:false,
       id:new Date().getTime()
