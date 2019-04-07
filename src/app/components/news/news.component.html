@@ -1,0 +1,39 @@
+<div class="newsComponent">
+  <app-header></app-header>
+  <p>
+    news works!我是新闻组件
+  </p>
+  <h2>{{title}}</h2>
+  <p>{{msg}}</p>
+  <p>{{username}}</p>
+  <p>{{useNumber}}</p>
+  <p>{{student}}</p>
+  <p>{{userinfo.age}}---{{userinfo.username}}</p>
+  <h3>angular模板里面中使用</h3>
+  <div title="这个是彩蛋初级版">鼠标移上来有彩蛋</div>
+  <div [title]="msg">鼠标移上来有彩蛋====使用动态数据绑定的</div>
+  <div class="red" [title]="msg" [innerHTML]="contentHTML"></div>
+  <h4>定义数组</h4>
+  <ul>
+    <li *ngFor="let item of arr">{{item}}</li>
+  </ul>
+  <hr /> <br />
+  <ul>
+    <li *ngFor="let item of list">{{item}}</li>
+  </ul>
+  <hr /> <br />
+  <ul>
+    <li *ngFor="let item of lists">{{item}}</li>
+  </ul>
+  <hr /> <br />
+  <ul>
+    <li *ngFor="let item of userlist">{{item.username}}---{{item.age}}</li>
+  </ul>
+  <h3>多层级数据嵌套循环渲染</h3>
+  <ul>
+    <li *ngFor="let item of cars">
+      <h4>{{item.cate}}</h4>
+      <p *ngFor="let items of item.list">{{items.title}}==={{items.age}}</p>
+    </li>
+  </ul>
+</div>

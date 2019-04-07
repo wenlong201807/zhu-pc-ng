@@ -1,0 +1,63 @@
+<div class="home_container">
+  home works!我是home组件
+  <h3>引入图片[src]="imgUrl"</h3>
+  <img src="assets/imgs/ng-title.png" alt="">
+  <br>
+  <img [src]="imgUrl" alt="">
+  <h3>循环渲染数据，显示数据的索引值*ngFor="let item of list;let key=index"</h3>
+  <ul>
+    <li *ngFor="let item of list;let key=index">
+      <span [ngClass]="{'red':key == 1,'blue':key === 2,'orange':key === 0}">{{item.title}}==={{key}}</span>
+    </li>
+    <br>
+    <li *ngFor="let item of list;let key=index">
+      <span *ngIf="key%2 === 1" class="red">{{item.title}}==={{key}}</span>
+      <span *ngIf="key%2 !=1">{{item.title}}==={{key}}</span>
+    </li>
+  </ul>
+  <h3>条件判断语句，选择性显示不同内容*ngIf="flag"</h3>
+  <div *ngIf="flag">
+    <img src="assets/imgs/antd_logo.png" alt="assets/imgs/antd_logo.png">
+  </div>
+  <div *ngIf="!flag">
+    <img src="assets/imgs/ng-title.png" alt="assets/imgs/ng-title.png">
+  </div>
+  <h3>选择项判断[ngSwitch]="orderStatus"</h3>
+  <div [ngSwitch]="orderStatus">
+    <p *ngSwitchCase="1">
+      <span>1.已经支付</span>
+    </p>
+    <p *ngSwitchCase="2">
+      <span>2.没有支付</span>
+    </p>
+    <p *ngSwitchCase="3">
+      <span>3.通过微信或者支付宝扫码才能支付</span>
+    </p>
+    <p *ngSwitchDefault>
+      <span>3.支付了一小部分，还有没支付的</span>
+    </p>
+  </div>
+  <h3>属性class,style</h3>
+  <div [ngClass]="{'red': firstBol,'blue':secondBol}">
+    动态显示不同类型的class样式效果
+  </div>
+  <div [ngStyle]="{'color': 'blue'}">style的展示效果===蓝色</div>
+  <div [ngStyle]="{'color': selfdefined}">style的展示效果===selfdifined</div>
+  <h3>管道操作符</h3>
+  <div>{{tody | date:'yyyy-MM-dd  HH:mm:ss'}}</div>
+  <h3>事件操作</h3>
+  <p>title内容的变化：{{title}}</p>
+  <button (click)="run()">执行事件</button> <br>
+  <button (click)="getTitle()">getTitle执行事件</button> <br>
+  <button (click)="setTitle()">setTitle执行事件</button> <br>
+  <h3>表单事件和事件对象</h3>
+  <button (click)="runEvent($event)">获取dom节点操作，点我之后，字体变红色</button> <br>
+  keydown <input type="text" (keydown)="keydown($event)">
+  keyup <input type="text" (keyup)="keyup($event)">
+  <h3>双向数据绑定，只针对表单</h3>
+  <div>
+    <button (click)="chengeInput($event)">改变输入框中的值为：666</button> <br>
+    <input type="text" name="" id="" [(ngModel)]="keywords">{{keywords}}
+  </div>
+
+</div>

@@ -1,0 +1,21 @@
+.home_container {
+  box-sizing: border-box;
+  padding: 20px;
+  height: 100vh;
+  min-width: 300px;
+  min-height: 400px;
+  overflow: auto;
+  background: bisque;
+
+  .red {
+    color: red;
+  }
+
+  .blue {
+    background: yellowgreen;
+  }
+
+  .orange {
+    color: orange;
+  }
+}
