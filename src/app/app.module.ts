@@ -4,6 +4,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 // angular 核心模块
 import { NgModule } from '@angular/core';
+// 引入表单相关的模块，才可以使用双向数据绑定功能
 import { FormsModule } from '@angular/forms';
 
 // 路由模块
@@ -13,6 +14,8 @@ import { AppComponent } from './app.component';
 import { NewsComponent } from './components/news/news.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FromComponent } from './components/from/from.component';
+import { SearchComponent } from './components/search/search.component';
 
 // @NgModule 装饰器，@NgModule接收一个元数据对象，告诉angular 如何编译和启动应用
 @NgModule({
@@ -21,7 +24,9 @@ import { HeaderComponent } from './components/header/header.component';
 		AppComponent,
 		NewsComponent,
 		HomeComponent,
-		HeaderComponent
+		HeaderComponent,
+		FromComponent,
+		SearchComponent
 	],
 	imports: [
 		// 配置当前模块运行依赖的其他模块
