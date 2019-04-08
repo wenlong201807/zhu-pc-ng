@@ -16,6 +16,10 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FromComponent } from './components/from/from.component';
 import { SearchComponent } from './components/search/search.component';
+import { TodolistComponent } from './components/todolist/todolist.component';
+
+// 引入并且配置服务
+import { StorageService } from './services/storage.service';
 
 // @NgModule 装饰器，@NgModule接收一个元数据对象，告诉angular 如何编译和启动应用
 @NgModule({
@@ -26,7 +30,8 @@ import { SearchComponent } from './components/search/search.component';
 		HomeComponent,
 		HeaderComponent,
 		FromComponent,
-		SearchComponent
+		SearchComponent,
+		TodolistComponent
 	],
 	imports: [
 		// 配置当前模块运行依赖的其他模块
@@ -34,7 +39,7 @@ import { SearchComponent } from './components/search/search.component';
 		AppRoutingModule,
 		FormsModule
 	],
-	providers: [], // 配置项目所需要的服务
+	providers: [ StorageService ], // 配置项目所需要的服务
 	bootstrap: [ AppComponent ] // 指定应用的主视图，（称为根组件） 通过引用根AppModule 来启动应用，这里一般写的是根组件
 })
 export // 根模块不需要导入任何东西

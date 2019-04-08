@@ -1,0 +1,24 @@
+<input type="text" [(ngModel)]="keyword" (keyup)="doAdd($event)">
+<!-- <button (click)="doSearch()">搜索</button> -->
+<br>&nbsp;
+<hr>
+<h3>代办事项</h3>
+<ul>
+  <li *ngFor="let item of historyList;let key = index" [hidden]="item.status == true">
+    <input type="checkbox" [(ngModel)]="item.status"> <span>------</span>
+
+    {{item.title}}<span>------</span>
+    <button (click)="delHistory(key)">删除</button>
+  </li>
+</ul>
+<br>
+<hr><br>
+<h3>已完成事项</h3>
+<ul>
+  <li *ngFor="let item of historyList;let key = index" [hidden]="item.status == false">
+    <input type="checkbox" [(ngModel)]="item.status"> <span>------</span>
+
+    {{item.title}}<span>------</span>
+    <button (click)="delHistory(key)">删除</button>
+  </li>
+</ul>
