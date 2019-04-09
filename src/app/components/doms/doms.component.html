@@ -1,0 +1,12 @@
+<div>
+  <app-header #header></app-header>
+  <h2 id="box">这是一个dom组件，展示DOM操作</h2>
+  <div id="box1" *ngIf="true">我是获取节点元素，放在gnOnit中是要报错的</div>
+  <br>
+  <hr>
+  <br>
+  <h4>dom专业操作方式</h4>
+
+  <div #myBox>我是一个dom节点</div>
+  <button (click)="getHeader()">点我获取header的</button>
+</div>

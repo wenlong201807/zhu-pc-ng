@@ -1,0 +1,10 @@
+#aside {
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background: pink;
+  transition: all 3s ease;
+  transform: translate(100%, 0)
+}

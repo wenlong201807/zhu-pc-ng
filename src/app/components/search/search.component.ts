@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { StorageService } from '../../services/storage.service';
 // 可以使用，但不推荐这么使用
 // let storage = new StorageService()
+// console.log(storage)
 
 
 @Component({
@@ -25,8 +26,8 @@ public catchList:Array<any>=[
     // console.log(storage)
     // console.log(storage.get())
     // console.log()
-    let ss = this.storage.get()
-    console.log(ss)
+    // let ss = this.storage.get()
+    // console.log(ss)
   }
 
   ngOnInit() {
