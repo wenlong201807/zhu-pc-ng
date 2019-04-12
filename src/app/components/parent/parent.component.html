@@ -1,0 +1,33 @@
+<div>
+  <h2>我是父组件</h2>
+  <br>
+  <button (click)="getChildFn()">用来获取child组件中的方法</button>
+  <br>
+  <button (click)="getChildProps()">用来获取child组件中的属性</button>
+  <br>
+  <hr>
+  <h4>通过@Output给父组件广播数据</h4>
+  <button (click)="parentControlChildFn()">父组件触发子组件的方法</button>
+  <app-footer (outer)="run($event)"></app-footer>
+  <!-- <app-footer (outer)="parentControlChildFn($event)"></app-footer> -->
+
+  <hr>
+  <br>
+</div>
+<br>
+<hr>
+<div class="child">
+  <div class="childLeft">
+    <h3>我是孩纸组件</h3>
+    <br>
+    <app-child #child [titleChild]="titleToChild" [childmsg]="msg" [parentRunFn]="parentRun" [parentComponent]="this">
+    </app-child>
+  </div>
+  <div class="childRight">
+    <h3>我是新闻组件</h3>
+    <br>
+    <app-news [childmsg]="msg" [titleToNews]="titleToNews"></app-news>
+    <!-- <app-news [titleNews]="titleToNews"></app-news> -->
+  </div>
+
+</div>

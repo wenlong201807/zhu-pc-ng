@@ -1,0 +1,15 @@
+.child {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .childLeft {
+    flex: 1;
+    background: pink;
+  }
+
+  .childRight {
+    flex: 1;
+    background: burlywood;
+  }
+}

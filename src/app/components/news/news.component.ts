@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
 	selector: 'app-news',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: [ './news.component.scss' ]
 })
 export class NewsComponent implements OnInit {
+@Input() childmsg: any;
+@Input() titleToNews: any;
 public title = '我是新闻组件中定义的标题';
 msg = "我是msg---newcomponent"
 username:string = "朱文龙---定义了类型的typescript"

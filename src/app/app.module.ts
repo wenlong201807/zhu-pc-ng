@@ -20,8 +20,15 @@ import { TodolistComponent } from './components/todolist/todolist.component';
 
 // 引入并且配置服务
 import { StorageService } from './services/storage.service';
+import { RequestService } from './services/request.service';
 import { DomsComponent } from './components/doms/doms.component';
 import { TransitionComponent } from './components/transition/transition.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LifeCycleComponent } from './components/life-cycle/life-cycle.component';
+import { RequestComponent } from './components/request/request.component';
+import { MapAndfilterComponent } from './components/map-andfilter/map-andfilter.component';
 
 // @NgModule 装饰器，@NgModule接收一个元数据对象，告诉angular 如何编译和启动应用
 @NgModule({
@@ -35,7 +42,13 @@ import { TransitionComponent } from './components/transition/transition.componen
 		SearchComponent,
 		TodolistComponent,
 		DomsComponent,
-		TransitionComponent
+		TransitionComponent,
+		ParentComponent,
+		ChildComponent,
+		FooterComponent,
+		LifeCycleComponent,
+		RequestComponent,
+		MapAndfilterComponent
 	],
 	imports: [
 		// 配置当前模块运行依赖的其他模块
@@ -43,7 +56,7 @@ import { TransitionComponent } from './components/transition/transition.componen
 		AppRoutingModule,
 		FormsModule
 	],
-	providers: [ StorageService ], // 配置项目所需要的服务
+	providers: [ StorageService, RequestService ], // 配置项目所需要的服务
 	bootstrap: [ AppComponent ] // 指定应用的主视图，（称为根组件） 通过引用根AppModule 来启动应用，这里一般写的是根组件
 })
 export // 根模块不需要导入任何东西
