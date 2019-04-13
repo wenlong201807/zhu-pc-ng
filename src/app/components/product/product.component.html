@@ -1,0 +1,18 @@
+<h3>参数传值</h3>
+<!-- <ul>
+  <li *ngFor="let item of list;let key=index">
+    <a [routerLink]="[ '/ProductDetailComponent']" [queryParams]="{aid:key+1,name:'朱文龙'}">{{key+1}}---{{item}}</a>
+  </li>
+</ul> -->
+<h3>动态路由传值</h3>
+<ul>
+  <li *ngFor="let item of list;let key=index">
+    <a [routerLink]="[ '/ProductDetailComponent', key+1 ]">{{key+1}}---{{item}}</a>
+  </li>
+</ul>
+<h3>js操作控制路由跳转</h3>
+<button (click)="goProductDetail()">js跳转路由</button>
+<br>
+<button (click)="GoHome()">跳转到首页</button>
+<br>
+<button (click)="GetProductDetail()">get传值跳转到首页</button>

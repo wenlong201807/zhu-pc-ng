@@ -1,0 +1,12 @@
+<p>
+  http works!
+</p>
+<button (click)="getDataHand()">get请求数据</button>
+<button (click)="doLogin()">post提交数据</button>
+<ul>
+  <li *ngFor="let item of lists;let key=index">
+    {{item.id}}---{{item.title}}---{{item.author}} <button (click)="delete(item.id)">删除</button></li>
+</ul>
+<br>
+<hr>
+<button (click)="getAxiosData()">通过第三方模块获取服务器数据</button>

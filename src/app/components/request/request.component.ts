@@ -82,6 +82,9 @@ export class RequestComponent implements OnInit {
         if(valueNum % 2 == 0){
          return true
         }
+      }),
+      map((value) => {
+        return value * value
       })
     )
     .subscribe(value => {
