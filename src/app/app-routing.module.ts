@@ -18,6 +18,7 @@ import { MapAndfilterComponent } from './components/map-andfilter/map-andfilter.
 import { HttpComponent } from './components/http/http.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { TemplateComponent } from './components/template/template.component';
 
 const routes: Routes = [
 	{ path: 'NewsComponent', component: NewsComponent, children: [] },
@@ -38,6 +39,7 @@ const routes: Routes = [
 	{ path: 'ProductComponent', component: ProductComponent, children: [] },
 	// { path: 'ProductDetailComponent', component: ProductDetailComponent, children: [] },
 	{ path: 'ProductDetailComponent/:aid', component: ProductDetailComponent, children: [] },
+	{ path: 'TemplateComponent', component: TemplateComponent, children: [] },
 	// 匹配不到路由，默认跳转到指定路由页面
 	{ path: '**', redirectTo: 'HomeComponent' }
 ];

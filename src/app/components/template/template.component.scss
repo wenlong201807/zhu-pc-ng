@@ -1,0 +1,26 @@
+.header {
+  height: 45px;
+  line-height: 45px;
+  padding: 0 20px;
+  background: paleturquoise;
+
+  a {
+    margin-right: 20px;
+  }
+}
+
+.template {
+  display: flex;
+  align-content: space-between;
+  height: 400px;
+
+  .menu {
+    width: 200px;
+    background: burlywood;
+  }
+
+  .content {
+    flex: 1;
+    background: beige;
+  }
+}

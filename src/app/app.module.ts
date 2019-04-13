@@ -34,6 +34,7 @@ import { MapAndfilterComponent } from './components/map-andfilter/map-andfilter.
 import { HttpComponent } from './components/http/http.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { TemplateComponent } from './components/template/template.component';
 
 // @NgModule 装饰器，@NgModule接收一个元数据对象，告诉angular 如何编译和启动应用
 @NgModule({
@@ -56,7 +57,8 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 		MapAndfilterComponent,
 		HttpComponent,
 		ProductComponent,
-		ProductDetailComponent
+		ProductDetailComponent,
+		TemplateComponent
 	],
 	imports: [
 		// 配置当前模块运行依赖的其他模块
